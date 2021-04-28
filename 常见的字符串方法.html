@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str = '你好啊,李银河!686868'
+    //查找
+    //1.indexOf:查找字符串首次出现的位置,如果找到返回该字符串的下标值,下标从0开始查找,找不到返回-1。
+    //console.log(str.indexOf('你'));//打印 0
+    //console.log(str.indexOf('7'));//打印 -1
+
+
+    //2.charAt:charAt方法是查找下标,返回对应的内容,如果没有该下标,则返回空字符串。
+    //console.log(str.charAt(3));//打印 ","
+
+    
+    //3.match:匹配字符串,查找到返回一个数组对象,数组对象里有 匹配的值 查找字符串的下标 和 原字符串内容,找不到返回null
+    //console.log(str.match('你')); //打印 ["你", index: 0, input: "你好啊,李银河!686868", groups: undefined]
+    //console.log(str.match('999')); //打印 null
+
+    // 截取
+    //1.substring:只有一位参数是截取掉几位字符(从0位开始计算),有二位参数是从哪个位置开始,到那个位置结束的前一位,不包括结束的位置,这个区间的字符串会被返回，其它部分全部删除,不会改变原字符串。
+    //console.log(str.substring(3));//打印 ",李银河!686868"
+    //console.log(str.substring(1,3));//打印 "好啊"
+
+
+    //2.slice:该方法也是截取字符,它跟substring方法几乎一样,只不过该方法也可以写负数,其它的使用方式,都跟substring一样,该方法也不会改变原字符串。
+    //console.log(str.slice(3));//打印 ",李银河!686868"
+    //console.log(str.slice(1,3));//打印 "好啊"
+    //console.log(str.slice(1,-1));//打印 "好啊,李银河!68686"
+
+
+    // 替换
+    //1.replace:替换字符串,第一个值为被替换的值,第二个值为替换的值,不会改变原字符串。
+    //console.log(str.replace('河','江'));//打印 "你好啊,李银江!686868"
+
+    
+    // 字符串转数组
+    //1.split:该方法是字符串分割为数组,参数是以什么方式分割。同样不会改变原字符串.
+    //console.log(str.split('!'));//打印  ["你好啊,李银河", "686868"]
+
+  
+  </script>
+</body>
+</html>
